@@ -35,8 +35,8 @@ class title(BaseModel):
         return f"{self.FirstName} {self.LastName}"
 
 class albums(BaseModel):
-    titleID = models.ForeignKey(title, on_delete=models.CASCADE)
-    durationID = models.ForeignKey(duration, on_delete=models.CASCADE)
+    song = models.ForeignKey(title, on_delete=models.CASCADE, default=1)  # Example default value '1'
+    artist = models.ForeignKey(duration, on_delete=models.CASCADE)
 
 class date_added(BaseModel):
     date_addedID = models.AutoField(primary_key=True)
