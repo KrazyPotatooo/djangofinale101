@@ -15,7 +15,7 @@ class artist(BaseModel):
     ProfileImage = models.ImageField(upload_to='artist_images/',blank=True, null=True)
 
     def __str__(self):
-        return f"{self.ProfileImage} {self.FirstName} {self.LastName}"
+        return f"{self.FirstName} {self.LastName}"
 
 class duration(BaseModel):
     durationID = models.AutoField(primary_key=True)

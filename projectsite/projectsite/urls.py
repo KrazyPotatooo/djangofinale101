@@ -35,6 +35,7 @@ urlpatterns = [
     path('date_addeds/<int:pk>/', date_addedUpdateView.as_view(), name='date_added-update'),
     path('date_addeds/<int:pk>/delete/', date_addedDeleteView.as_view(), name='date_added-delete'),
     path('albums/update/', albumsUpdateView.as_view(), name='albums-update'),  # Use the imported view directly
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

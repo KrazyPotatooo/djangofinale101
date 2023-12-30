@@ -14,8 +14,7 @@
         {% for albums in object_list %}  <!-- Change the variable name to 'album' -->
         <tr>
           <td>{{ albums.artist }} </td>
-            {{ albums.song}}</td>  <!-- Use 'album.artist' and 'album.song' -->
-          <td>{{ albums.song}}</td>  <!-- Adjust as per your model structure -->
+            <td>{{ albums.song}}</td>  <!-- Use 'album.artist' and 'album.song' -->
           <td>
             <a href="{% url 'albums-update' pk=albums.pk %}">Edit</a> |  <!-- Use 'album.pk' -->
             <a href="{% url 'albums-delete' pk=albums.pk %}">Delete</a>
